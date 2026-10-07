@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metal Gear Retro: FOXHOUND Enlistment</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    
+    <aside class="sidebar">
+      <p class="prompt"><span aria-hidden="true">&#9654;</span> New game<span class="blink" aria-hidden="true">_</span></p>
+    </aside>
+
+    <main class="dossier">
+      <p class="ghost-freq" aria-hidden="true">140.85</p>
+      <div class="hud">
+        <div class="hud-life">
+          <span class="hud-label">Life</span>
+          <span class="life-bar" aria-hidden="true"><span class="life-fill"></span></span>
+        </div>
+        <p class="hud-class"><span class="hud-label">Class</span> <span class="stars" aria-label="4 stars">&#9733;&#9733;&#9733;&#9733;</span></p>
+      </div>
+
+      <p class="ticker" aria-hidden="true"><span class="ticker-inner">Incoming transmission from Colonel Campbell: FOXHOUND enlistment is open. Fill in your recruit file to receive mission briefings. Avoid detection. +++ Incoming transmission from Colonel Campbell: FOXHOUND enlistment is open. Fill in your recruit file to receive mission briefings. Avoid detection. +++&nbsp;</span></p>
+
+      <section class="briefing">
+        <h2>Mission briefing</h2>
+        <p>
+          Snake, Metal Gear Retro is back on the radar. FOXHOUND needs
+          operatives with a clean record and steady nerves. Create your
+          account below to get your codec frequency and deployment orders.
+        </p>
+      </section>
+      
+      <form action="#" method="post">
+        <fieldset class="recruit-card">
+    
+          <legend>Recruit file</legend>
+
+          <div class="field">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Your name" required autocomplete="given-name">
+            <span class="alert" aria-hidden="true">!</span>
+            <p class="hint">Enter your first name.</p>
+          </div>
+
+          <div class="field">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Your callsign" required autocomplete="family-name">
+            <span class="alert" aria-hidden="true">!</span>
+            <p class="hint">Enter your last name.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@foxhound.mil" required autocomplete="email">
+            <span class="alert" aria-hidden="true">!</span>
+            <p class="hint">Enter a valid email address.</p>
+          </div>
+
+          <div class="field">
+            <label for="phone"><span aria-hidden="true">&#127466;&#127468;</span> Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+20 1XX XXX XXXX" required inputmode="tel" pattern="(\+20 ?)?0?1[0-9]{9}" autocomplete="tel">
+            <span class="alert" aria-hidden="true">!</span>
+            <p class="hint">Egyptian mobile: +20 1XXXXXXXXX.</p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="8+ characters" minlength="8" required autocomplete="new-password">
+            <span class="alert" aria-hidden="true">!</span>
+            <p class="hint">Minimum 8 characters.</p>
+          </div>
+
+          <div class="field">
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="repeat it" minlength="8" required autocomplete="new-password">
+            <span class="alert" aria-hidden="true">!</span>
+            <p class="hint">Minimum 8 characters.</p>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit"><span aria-hidden="true">&#9654;</span> Create Account</button>
+          <p class="login-line">Already enlisted? <a href="#">Log in</a></p>
+        </div>
+      </form>
+
+      <footer class="site-footer">Made by <strong>FearThePLOTO</strong> for The Odin Project not affiliated with <strong>Konami</strong>.</footer>
+    </main>
+
+  </div>
+
+  <section class="transmission" id="transmission" hidden>
+    <p class="transmission-kicker">Incoming transmission</p>
+    <p class="typed-line"><span id="typed-text"></span><span class="cursor" aria-hidden="true"></span></p>
+  </section>
+
+</body>
+</html>
